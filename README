@@ -1,0 +1,33 @@
+my solution for "dont get kicked" competition on kaggel
+www.kaggle.com/c/DontGetKicked
+
+
+go to neuralnetwork.m to get started
+
+
+i find it surprising how well neural networks work in some cases when really complex transfer function is involved.. and it's relatively easy to get started..
+
+my best submission has a total of 81 nodes in input layer, 20 in the hidden ayer and a single output layer that gives the probability of a car getting kicked..
+
+the normalized gini from the test set my submission is around 0.24 where as the best submission nhas around 0.27. i just couldn't improve my classifier any further just using neural networks.. the winning submission might be using combination of algorithms like random forests, nns 
+
+i tried using several variations of this network by introducing new nodes that are just quadratic function of the available 81 nodes, by changing the number of hidden nodes and even by having an extra hidden layer..
+
+most of my time is spen cleaning the data, and make it readily available as an input data to my classifier.. may be i find it took most of my time is because cleaning the data is really boring.
+
+
+i made the data availale in the form of binary files 
+cleanbinary
+binaryclean
+testbinary
+expandedtest
+just load them in octave using load function and you will get the data inth form stored in octave variables
+
+
+go straight into neuralnetwork.m file
+thats should be the starting point..
+and i used a cutoff of 0.210 to get the maximum F number
+
+
+i tried using logistic regression, but it performed really poorly,
+i couldn't even get anamoly detection to get to work properly, given this problem is simialr to anamoly detection where the postive cases are less in number to the negative testcases
